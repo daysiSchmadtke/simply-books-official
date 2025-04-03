@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
+// import { getAuthors } from '../../api/authorData';
 import { createBook, updateBook } from '../../api/bookData';
 
 const initialState = {
@@ -20,8 +21,15 @@ const initialState = {
 
 function BookForm({ obj = initialState }) {
   const [formInput, setFormInput] = useState(obj);
+  // const [authors, setAuthors] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
+
+  useEffect(() => {
+    // getAuthors(user.uid).then(setAuthors);
+
+    if (obj.firebaseKey) setFormInput(obj);
+  }, [obj, user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
