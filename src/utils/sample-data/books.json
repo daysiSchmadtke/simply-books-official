@@ -1,132 +1,92 @@
- {
-    "-MiBsBKGWFEU-yluJkL-": {
-      "author_id": "-MiBt86VzkC-EGmJnxjm",
-      "firebaseKey": "-MiBsBKGWFEU-yluJkL-",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/91+NBrXG-PL.jpg",
-      "price": "24.99",
-      "description": "A memoir by the 44th President of the United States.",
-      "sale": false,
-      "title": "A Promised Land",
-      "uid": ""
-    },
-    "-MiBsknNSQ6aBG1-2lQS": {
-      "author_id": "-MiBsfuTafbEQ7eAULxV",
-      "firebaseKey": "-MiBsknNSQ6aBG1-2lQS",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/A1agLFsWkOL.jpg",
-      "price": "12.99",
-      "description": "A West African-inspired fantasy novel.",
-      "sale": true,
-      "title": "Children of Blood and Bone",
-      "uid": ""
-    },
-    "-MiBuCve4-r_H-RLUOh2": {
-      "author_id": "-MiBtwf1BwN9pGavQeR3",
-      "firebaseKey": "-MiBuCve4-r_H-RLUOh2",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/51529Lfc2ML.jpg",
-      "price": "30.00",
-      "description": "A people’s history, written with focus on the marginalized.",
-      "sale": false,
-      "title": "A People's History of the United States of America",
-      "uid": ""
-    },
-    "-MiBuU13EaKmGOMjJF-X": {
-      "author_id": "-MiBuOfHv9NCKB_cneij",
-      "firebaseKey": "-MiBuU13EaKmGOMjJF-X",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81rRRmZZvZL.jpg",
-      "price": "15.89",
-      "description": "A prequel to 'The Hate U Give.'",
-      "sale": false,
-      "title": "Concrete Rose",
-      "uid": ""
-    },
-    "-MiBuqoYjFwbXyA8oiiw": {
-      "author_id": "-MiBulenBnY8by9Xn7q1",
-      "firebaseKey": "-MiBuqoYjFwbXyA8oiiw",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/A1Cu4ywUeyL.jpg",
-      "price": "25.00",
-      "description": "A Pulitzer Prize-winning exploration of slavery.",
-      "sale": true,
-      "title": "The Underground Railroad",
-      "uid": ""
-    },
-    "-MiBvEFJTI3FmTzDu_3V": {
-      "author_id": "-MiBv9_aOEJQWoobjz_U",
-      "firebaseKey": "-MiBvEFJTI3FmTzDu_3V",
-      "image": "https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale/jackets/9781526622402.jpg",
-      "price": "12.99",
-      "description": "Mikki Kendall addresses modern feminism’s blind spots.",
-      "sale": true,
-      "title": "Hood Feminism",
-      "uid": ""
-    },
-    "-MiBvW8ME_DvO2GzwQ8D": {
-      "author_id": "-MiBvQiWr6XNwNa1i3-0",
-      "firebaseKey": "-MiBvW8ME_DvO2GzwQ8D",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81Uf1dTjfQL.jpg",
-      "price": "15.00",
-      "description": "A reimagining of Alice in Wonderland.",
-      "sale": false,
-      "title": "A Blade So Black",
-      "uid": ""
-    },
-    "-MiBvf3bIyooE6x4nLLB": {
-      "author_id": "-MiBvQiWr6XNwNa1i3-0",
-      "firebaseKey": "-MiBvf3bIyooE6x4nLLB",
-      "image": "https://m.media-amazon.com/images/I/51BZdlchEsL.jpg",
-      "price": "14.99",
-      "description": "The sequel to 'A Blade So Black.'",
-      "sale": false,
-      "title": "A Dream So Dark",
-      "uid": ""
-    },
-    "-MiBwAF5wOY00AYJm7cR": {
-      "author_id": "-MiBw4tCvNZd23yTVDQw",
-      "firebaseKey": "-MiBwAF5wOY00AYJm7cR",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/61GSqXVhhKL.jpg",
-      "price": "12.00",
-      "description": "James Baldwin's powerful essays on race and identity.",
-      "sale": false,
-      "title": "The Fire Next Time",
-      "uid": ""
-    },
-    "-MiByDante1": {
-      "author_id": "-MiByAuthDante",
-      "firebaseKey": "-MiByDante1",
-      "image": "https://example.com/divine-comedy.jpg",
-      "price": "20.00",
-      "description": "Dante's masterful journey through Hell.",
-      "sale": false,
-      "title": "The Divine Comedy: Inferno",
-      "uid": ""
-    },
-    "-MiByDonQ1": {
-      "author_id": "-MiByAuthDonQ",
-      "firebaseKey": "-MiByDonQ1",
-      "image": "https://example.com/don-quixote.jpg",
-      "price": "18.00",
-      "description": "The adventures of Don Quixote and Sancho Panza.",
-      "sale": true,
-      "title": "Don Quixote",
-      "uid": ""
-    },
-    "-MiByPrince1": {
-      "author_id": "-MiByAuthPrince",
-      "firebaseKey": "-MiByPrince1",
-      "image": "https://example.com/prince.jpg",
-      "price": "15.00",
-      "description": "A treatise on political strategy by Niccolò Machiavelli.",
-      "sale": false,
-      "title": "The Prince",
-      "uid": ""
-    },
-    "-MiByGrim1": {
-      "author_id": "-MiByAuthGrim",
-      "firebaseKey": "-MiByGrim1",
-      "image": "https://example.com/grimm.jpg",
-      "price": "10.99",
-      "description": "A collection of classic fairy tales by the Brothers Grimm.",
-      "sale": false,
-      "title": "Grimm's Fairy Tales",
-      "uid": ""
-    }
- }
+{
+  "-MiBsBKGWFEU-yluJkL-": {
+    "author_id": "-MiBt86VzkC-EGmJnxjm",
+    "firebaseKey": "-MiBsBKGWFEU-yluJkL-",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/91+NBrXG-PL.jpg",
+    "price": "24.99",
+    "description": "",
+    "sale": false,
+    "title": "A Promised Land",
+    "uid": ""
+  },
+  "-MiBsknNSQ6aBG1-2lQS": {
+    "author_id": "-MiBsfuTafbEQ7eAULxV",
+    "firebaseKey": "-MiBsknNSQ6aBG1-2lQS",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/A1agLFsWkOL.jpg",
+    "price": "12.99",
+    "description": "",
+    "sale": true,
+    "title": "Children of Blood and Bone",
+    "uid": ""
+  },
+  "-MiBuCve4-r_H-RLUOh2": {
+    "author_id": "-MiBtwf1BwN9pGavQeR3",
+    "firebaseKey": "-MiBuCve4-r_H-RLUOh2",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51529Lfc2ML.jpg",
+    "price": "30.00",
+    "description": "",
+    "sale": false,
+    "title": "A People's History of the United States of America",
+    "uid": ""
+  },
+  "-MiBuU13EaKmGOMjJF-X": {
+    "author_id": "-MiBuOfHv9NCKB_cneij",
+    "firebaseKey": "-MiBuU13EaKmGOMjJF-X",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81rRRmZZvZL.jpg",
+    "price": "15.89",
+    "description": "",
+    "sale": false,
+    "title": "Concrete Rose",
+    "uid": ""
+  },
+  "-MiBuqoYjFwbXyA8oiiw": {
+    "author_id": "-MiBulenBnY8by9Xn7q1",
+    "firebaseKey": "-MiBuqoYjFwbXyA8oiiw",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/A1Cu4ywUeyL.jpg",
+    "price": "25.00",
+    "description": "",
+    "sale": true,
+    "title": "The Underground Railroad",
+    "uid": ""
+  },
+  "-MiBvEFJTI3FmTzDu_3V": {
+    "author_id": "-MiBv9_aOEJQWoobjz_U",
+    "firebaseKey": "-MiBvEFJTI3FmTzDu_3V",
+    "image": "https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale/jackets/9781526622402.jpg",
+    "price": "12.99",
+    "description": "",
+    "sale": true,
+    "title": "Hood Feminism",
+    "uid": ""
+  },
+  "-MiBvW8ME_DvO2GzwQ8D": {
+    "author_id": "-MiBvQiWr6XNwNa1i3-0",
+    "firebaseKey": "-MiBvW8ME_DvO2GzwQ8D",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81Uf1dTjfQL.jpg",
+    "price": "15.00",
+    "description": "",
+    "sale": false,
+    "title": "A Blade So Black",
+    "uid": ""
+  },
+  "-MiBvf3bIyooE6x4nLLB": {
+    "author_id": "-MiBvQiWr6XNwNa1i3-0",
+    "firebaseKey": "-MiBvf3bIyooE6x4nLLB",
+    "image": "https://m.media-amazon.com/images/I/51BZdlchEsL.jpg",
+    "price": "14.99",
+    "description": "",
+    "sale": false,
+    "title": "A Dream So Dark",
+    "uid": ""
+  },
+  "-MiBwAF5wOY00AYJm7cR": {
+    "author_id": "-MiBw4tCvNZd23yTVDQw",
+    "firebaseKey": "-MiBwAF5wOY00AYJm7cR",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61GSqXVhhKL.jpg",
+    "price": "12.00",
+    "description": "",
+    "sale": false,
+    "title": "The Fire Next Time",
+    "uid": ""
+  }
+}

@@ -1,4 +1,42 @@
 body {
-  background: black;
-  color: white;
+  background: #808080;
+  color:#FAF9F6;
+}
+
+/* Hover effect for card */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Elevate with shadow */
+}
+
+.card-animation {
+  animation: fadeIn 1.5s ease-in forwards; /* Slower duration */
+}
+
+.card-animation:nth-child(1) {
+  animation-delay: 0.5s; /* Increased delay */
+}
+.card-animation:nth-child(2) {
+  animation-delay: 1s;
+}
+.card-animation:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.card-animation:nth-child(4) {
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Start closer */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
