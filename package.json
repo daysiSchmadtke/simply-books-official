@@ -10,6 +10,9 @@
     "prepare": "husky",
     "pre-commit": "next lint"
   },
+  "author": {
+    "name": "Daysi Schmadtke"
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",

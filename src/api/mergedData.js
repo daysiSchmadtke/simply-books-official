@@ -1,38 +1,49 @@
-import { getAuthorBooks, getSingleAuthor, deleteSingleAuthor } from './authorData';
 import { getSingleBook, deleteBook } from './bookData';
+import { getAuthorBooks, getSingleAuthor, deleteSingleAuthor } from './authorData';
 
-const viewBookDetails = (bookFirebaseKey) =>
+// Get data for viewBook
+const getBookDetails = (firebaseKey) =>
   new Promise((resolve, reject) => {
-    getSingleBook(bookFirebaseKey)
+    // GET SINGLE BOOK
+    getSingleBook(firebaseKey)
       .then((bookObject) => {
-        getSingleAuthor(bookObject.author_id).then((authorObject) => {
-          resolve({ authorObject, ...bookObject });
-        });
+        // return single book object, make an API call using this object.
+        getSingleAuthor(bookObject.author_id) // we nest this promise so that we can use the book object from above.
+          .then((authorObject) => resolve({ ...bookObject, authorObject }));
       })
-      .catch((error) => reject(error));
+      .catch(reject);
+    // GET AUTHOR
+    // Create an object that has book data and an object named authorObject
   });
 
-const viewAuthorDetails = (authorFirebaseKey) =>
+const getAuthorDetails = (firebaseKey) =>
   new Promise((resolve, reject) => {
-    Promise.all([getSingleAuthor(authorFirebaseKey), getAuthorBooks(authorFirebaseKey)])
-      .then(([authorObject, authorBooksArray]) => {
-        resolve({ ...authorObject, books: authorBooksArray });
+    // GET SINGLE AUTHOR
+    getSingleAuthor(firebaseKey)
+      .then((authorObject) => {
+        // return single author object, make an API call using this object.
+        getAuthorBooks(authorObject.firebaseKey) // we nest this promise so that we can use the author object from above.
+          .then((bookObject) => {
+            const test = { ...authorObject, bookObject };
+            console.warn(test);
+            resolve(test);
+          });
       })
-      .catch((error) => reject(error));
+      .catch(reject);
   });
 
-const deleteAuthorBooks = (authorId) =>
+// Promise.all ensures that the api calls we're making (to delete the author's books) is completed before making another API call to delete the single author.
+const deleteAuthorBooksRelationship = (firebaseKey) =>
   new Promise((resolve, reject) => {
-    getAuthorBooks(authorId)
-      .then((booksArray) => {
-        console.warn(booksArray, 'Author Books');
-        const deleteBookPromises = booksArray.map((book) => deleteBook(book.firebaseKey));
+    getAuthorBooks(firebaseKey)
+      .then((authorBooksArray) => {
+        const deleteBookPromises = authorBooksArray.map((book) => deleteBook(book.firebaseKey));
 
         Promise.all(deleteBookPromises).then(() => {
-          deleteSingleAuthor(authorId).then(resolve);
+          deleteSingleAuthor(firebaseKey).then(resolve);
         });
       })
-      .catch((error) => reject(error));
+      .catch(reject);
   });
 
-export { viewBookDetails, viewAuthorDetails, deleteAuthorBooks };
+export { getBookDetails, getAuthorDetails, deleteAuthorBooksRelationship };

@@ -1,13 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
-import { getAuthors } from '../../api/authorData';
 import { createBook, updateBook } from '../../api/bookData';
 
 const initialState = {
@@ -21,15 +20,8 @@ const initialState = {
 
 function BookForm({ obj = initialState }) {
   const [formInput, setFormInput] = useState(obj);
-  const [authors, setAuthors] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
-
-  useEffect(() => {
-    getAuthors(user.uid).then(setAuthors);
-
-    if (obj.firebaseKey) setFormInput(obj);
-  }, [obj, user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -73,16 +65,9 @@ function BookForm({ obj = initialState }) {
         <Form.Control type="text" placeholder="Enter price" name="price" value={formInput.price} onChange={handleChange} required />
       </FloatingLabel>
 
-      {/* AUTHOR SELECT  */}
-      <FloatingLabel controlId="floatingSelect" label="Author">
-        <Form.Select aria-label="Author" name="author_id" onChange={handleChange} className="mb-3" value={formInput.author_id || ''} required>
-          <option value="">Select an Author</option>
-          {authors.map((author) => (
-            <option key={author.firebaseKey} value={author.firebaseKey}>
-              {author.first_name} {author.last_name}
-            </option>
-          ))}
-        </Form.Select>
+      {/* AUTHOR NAME INPUT */}
+      <FloatingLabel controlId="floatingInputAuthor" label="Author Name" className="mb-3">
+        <Form.Control type="text" placeholder="Enter author name" name="author_name" value={formInput.author_name || ''} onChange={handleChange} required />
       </FloatingLabel>
 
       {/* DESCRIPTION TEXTAREA  */}

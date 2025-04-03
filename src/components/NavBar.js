@@ -6,7 +6,7 @@ import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="info" variant="primary">
       <Container>
         <Link passHref href="/" className="navbar-brand">
           Simply Books
@@ -22,7 +22,7 @@ export default function NavBar() {
               Authors
             </Link>
           </Nav>
-          <Button variant="danger" onClick={signOut}>
+          <Button variant="light" onClick={signOut}>
             Sign Out
           </Button>
         </Navbar.Collapse>
