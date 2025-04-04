@@ -20,7 +20,7 @@ function AuthorCard({ AuthorObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
+    <Card style={{ width: '20rem', margin: '10px' }}>
       <Card.Body>
         <Card.Title>
           {AuthorObj.first_name} {AuthorObj.last_name}
@@ -34,13 +34,13 @@ function AuthorCard({ AuthorObj, onUpdate }) {
           {AuthorObj.email}
         </p>
         {/* DYNAMIC LINK TO VIEW THE Author DETAILS  */}
-        <Link href={`/author/${AuthorObj.firebaseKey}`} passHref>
+        <Link href={`/authors/${AuthorObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">
             VIEW
           </Button>
         </Link>
         {/* DYNAMIC LINK TO EDIT THE Author DETAILS  */}
-        <Link href={`/author/edit/${AuthorObj.firebaseKey}`} passHref>
+        <Link href={`/authors/edit/${AuthorObj.firebaseKey}`} passHref>
           <Button variant="info">EDIT</Button>
         </Link>
         <Button variant="danger" onClick={deleteThisAuthor} className="m-2">

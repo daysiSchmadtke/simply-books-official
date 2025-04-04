@@ -26,7 +26,7 @@ function AuthorsPage() {
 
   return (
     <div className="text-center my-4">
-      <Link href="/author/new" passHref>
+      <Link href="/authors/new" passHref>
         <Button>Add An Author</Button>
       </Link>
       <div className="d-flex flex-wrap">
