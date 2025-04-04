@@ -67,7 +67,7 @@ Simply Books uses Firebase as its backend. To set up Firebase:
 
 ## Deployment
 The application is deployed at:
-[Simply Books Live](https://your-deployment-link.com)
+[Simply Books Live](https://simplybooksofficial.netlify.app/)
 
 ## Future Enhancements
 - User authentication for personalized book tracking.
