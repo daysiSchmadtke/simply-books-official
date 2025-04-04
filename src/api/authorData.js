@@ -2,7 +2,6 @@ import { clientCredentials } from '../utils/client';
 
 const endpoint = clientCredentials.databaseURL;
 
-// GET ALL AUTHORS
 const getAuthors = (uid) =>
   new Promise((resolve, reject) => {
     fetch(`${endpoint}/authors.json?orderBy="uid"&equalTo="${uid}"`, {
@@ -12,17 +11,10 @@ const getAuthors = (uid) =>
       },
     })
       .then((response) => response.json())
-      .then((data) => {
-        if (data) {
-          resolve(Object.values(data));
-        } else {
-          resolve([]);
-        }
-      })
+      .then((data) => resolve(Object.values(data)))
       .catch(reject);
   });
 
-// CREATE AUTHOR
 const createAuthor = (payload) =>
   new Promise((resolve, reject) => {
     fetch(`${endpoint}/authors.json`, {
@@ -37,7 +29,6 @@ const createAuthor = (payload) =>
       .catch(reject);
   });
 
-// GET SINGLE AUTHOR
 const getSingleAuthor = (firebaseKey) =>
   new Promise((resolve, reject) => {
     fetch(`${endpoint}/authors/${firebaseKey}.json`, {
@@ -51,7 +42,6 @@ const getSingleAuthor = (firebaseKey) =>
       .catch(reject);
   });
 
-// DELETE AUTHOR
 const deleteSingleAuthor = (firebaseKey) =>
   new Promise((resolve, reject) => {
     fetch(`${endpoint}/authors/${firebaseKey}.json`, {
@@ -60,12 +50,11 @@ const deleteSingleAuthor = (firebaseKey) =>
         'Content-Type': 'application/json',
       },
     })
-      .then((response) => response.json)
+      .then((response) => response.json())
       .then((data) => resolve(data))
       .catch(reject);
   });
 
-// UPDATE AUTHOR
 const updateAuthor = (payload) =>
   new Promise((resolve, reject) => {
     fetch(`${endpoint}/authors/${payload.firebaseKey}.json`, {
@@ -75,13 +64,11 @@ const updateAuthor = (payload) =>
       },
       body: JSON.stringify(payload),
     })
-      .then((response) => response.json)
-      .then(resolve)
+      .then((response) => response.json())
+      .then((data) => resolve(data))
       .catch(reject);
   });
 
-// Use double quotes after eqaulTo= inside the string query since, without it,
-// would be a non JSON primitive which will throw an error in your console.
 const getAuthorBooks = (firebaseKey) =>
   new Promise((resolve, reject) => {
     fetch(`${endpoint}/books.json?orderBy="author_id"&equalTo="${firebaseKey}"`, {
@@ -95,7 +82,6 @@ const getAuthorBooks = (firebaseKey) =>
       .catch(reject);
   });
 
-// GET - FILTER BY FAVORITE AUTHORS
 const favoriteAuthors = (uid) =>
   new Promise((resolve, reject) => {
     fetch(`${endpoint}/authors.json?orderBy="uid"&equalTo="${uid}"`, {
@@ -112,4 +98,4 @@ const favoriteAuthors = (uid) =>
       .catch(reject);
   });
 
-export { getAuthors, createAuthor, getSingleAuthor, deleteSingleAuthor, updateAuthor, getAuthorBooks, favoriteAuthors };
+export { getAuthors, createAuthor, getSingleAuthor, deleteSingleAuthor, updateAuthor, favoriteAuthors, getAuthorBooks };
